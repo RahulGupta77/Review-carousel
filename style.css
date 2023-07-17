@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color: hsl(209, 61%, 16%);
+  --clr-primary-5: hsl(205, 78%, 60%);
+
+  --ff-primary: "Roboto", sans-serif;
+  --spacing: 0.1rem;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear; 
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body{
+  background-color: #f2f7fe;
+  font-family: var(--ff-primary);
+  color: var(--primary-color);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1{
+  font-size: 3rem;
+}
+
+.underline{
+    height: 0.25rem;
+    width: 5rem;
+    background: var(--clr-primary-5);
+    margin-bottom: 4rem;
+}
+
+.container .card{
+  height: 50vh;
+  width: 45vw;
+  background-color: white;
+  border: none;
+  box-shadow: var(--dark-shadow);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+}
+
+/* nice image trick */
+.card .pfp{
+  margin-top: 30px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--clr-primary-5);
+  border-radius: 50%;
+}
+
+#person-img{
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.card .names{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .names h4{
+  color : var(--clr-primary-5);
+}
+
+.card .description {
+  color : hsl(212, 7%, 38%);
+  text-align: center;
+}
+
+.card .arrow{
+  display: flex;
+  column-gap: 40px;
+  width: 8rem;
+  justify-content: center;
+  color: var(--clr-primary-5);
+  font-size: 1.3rem;
+}
+
+.card .arrow .left-arrow:hover{
+  cursor: pointer;
+  color: hsl(205, 100%, 38%);
+}
+
+.card .arrow .right-arrow:hover{
+  cursor: pointer;
+  color: hsl(205, 100%, 38%);
+}
+
+.card .button button{
+  height: 1.8rem;
+  width: 6rem;
+  border: 1px solid var(--clr-primary-5);
+  border-radius: 1.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+
+.card .button button:hover{
+  cursor: pointer;
+  background-color: var(--clr-primary-5);
+  color: white;
+}
+
